@@ -51,5 +51,50 @@ int main()
 
 In this example the nums vector would be filled with 5 elements that are the value of 10 such as ```{10,10,10,10,10}```
 
+## Accessing elements
+Vectors are indexed just like arrays so we are able to access their values similarly.
+
+### Array style
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() 
+{
+  vector<string> str = {"The", "dog", "ran", "very", "fast"};
+
+  cout << str[1] << endl;
+
+  return 0;
+}
+```
+
+__Output__
+```
+dog
+```
+
+### .at()
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() 
+{
+  vector<string> str = {"The", "sun", "is", "very", "bright"};
+
+  cout << str.at(4) << endl;
+
+  return 0;
+}
+```
+
+__Output__
+```
+bright
+```
+
 ### Exercises
 __1.__ 
