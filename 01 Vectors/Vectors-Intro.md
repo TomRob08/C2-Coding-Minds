@@ -18,7 +18,7 @@ int main()
 
 In the code above we require ```#include <vector>``` and inside of ```main()``` a vector is declared with the data type within the ```<>``` and then the variable name comes after.
 
-## Declare a vector with elements
+## Vector initialization
 Vectors have multiple ways of being intitalized containing elements but let's look at the most faliliar and common ways.
 
 ### Brackets
@@ -50,6 +50,24 @@ int main()
 ```
 
 In this example the nums vector would be filled with 5 elements that are the value of 10 such as ```{10,10,10,10,10}```
+
+### .assign()
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() 
+{
+  vector<int> nums;
+
+  nums.assign (3,100);
+
+  return 0;
+}
+```
+
+This example is similar to the one above since the vector will be assigned with 3 elements that rae the value of 100 such as ```{100,100,100}```
 
 ## Accessing elements
 Vectors are indexed just like arrays so we are able to access their values similarly.
