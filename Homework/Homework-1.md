@@ -11,11 +11,22 @@ using namespace std;
 
 void add_to_list(vector<string>& groceryList, string item)
 {
+  string item = "";
+  
+  cout << "Please enter an item:" << endl;
+  cin.ignore();
+  getline(cin, item);
   // Add item
 }
 
 void del_from_list(vector<string>& groceryList, string item)
 {
+  string item = "";
+  
+  cout << "Please enter an item:" << endl;
+  cin.ignore();
+  getline(cin, item);
+  
   // Delete item
 }
 
@@ -27,7 +38,6 @@ void printList(vector<string> groceryList)
 int main() 
 {
   string userChoice = "";
-  string item = "";
   vector<string> groceryList;
 
   while(true)
@@ -42,17 +52,11 @@ int main()
 
     else if(userChoice == "add")
     {
-      cout << "Please enter an item:" << endl;
-      cin.ignore();
-      getline(cin, item);
       // Add item to list
     }
 
     else if(userChoice == "delete")
     {
-      cout << "Please enter an item:" << endl;
-      cin.ignore();
-      getline(cin, item);
       // Delete item from list
     }
 
