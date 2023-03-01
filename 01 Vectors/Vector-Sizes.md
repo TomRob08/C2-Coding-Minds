@@ -4,7 +4,7 @@ There are many different functions increase or decrease a vector's size. Here ar
 
 ## Get vector size
 ### .size()
-
+Returns the amount of elements in the vector.
 ```
 #include <iostream>
 #include <vector>
@@ -26,7 +26,7 @@ __1.__ Use ```.size()``` in a for loop to print all of the elements in the vecto
 
 ## Increase size
 ### .push_back()
-
+Adds a new element at the end of the vector containing a given value.
 ```
 #include <iostream>
 #include <vector>
@@ -54,6 +54,7 @@ __Output__
 ```
 
 ### .insert()
+Adds a new element at a specific place in the vector containing a given value.
 ```
 #include <iostream>
 #include <vector>
@@ -87,7 +88,7 @@ Here is an example of inserting 3 elements with the values of 9.18 into the nums
 
 ## Decrease size
 ### .pop_back()
-
+Similar to ```.push_back()```. Deletes an element at the end of the vector.
 ```
 #include<iostream>
 #include<vector>
@@ -115,7 +116,7 @@ a b c d
 ```
 
 ### .erase()
-
+Similar to ```.insert```. Delete an element at a specific place in the vector.
 ```
 #include<iostream>
 #include<vector>
@@ -143,6 +144,7 @@ a c d e
 ```
 
 ### .clear()
+Removes all elements in a vector
 ```
 #include<iostream>
 #include<vector>
@@ -172,6 +174,7 @@ __Output__
 ## Changing the size
 
 ### .resize()
+Resizes the amount of elements in a vector. If the vector is resized to a smaller size, all elements past the new size are removed.
 ```
 #include<iostream>
 #include<vector>
