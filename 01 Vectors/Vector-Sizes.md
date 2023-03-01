@@ -235,5 +235,7 @@ a b c
 ### Exercises
 __1.__ Resize this vector to have 6 elements: {'s', 'y', 's', 't', 'e', 'm', 'a', 't', 'i', 'c'}
 
-__2.__ Create 2 vectors with 10 elements each containing random numbers between 1 and 50 for the values. Print out all the numbers they have in common.
+__2.__ Create 2 vectors with 10 elements each containing random numbers between 1 and 20 for the values. Print out all the numbers they have in common.
+
+__3.__ Build upon the previous exercise to only print the same matching values once.
 
