@@ -48,8 +48,7 @@ int main()
 
   while(true)
   {
-    cout << "Would you like to add an item, delete an item, clear all items or print the list?\n" <<
-          "(Enter add, delete, clear, print or \'*' to end the program)" << endl;
+    cout << "Enter add, delete, clear, print or \'*' to end the program" << endl;
 
     cin >> userChoice;
 
@@ -81,4 +80,59 @@ int main()
   }
   return 0;
 }
+```
+
+### Example Output (Lines with // is user input)
+```
+Enter add, delete, clear, print or '*' to end the program
+// add
+Please enter an item:
+// Pineapples
+Enter add, delete, clear, print or '*' to end the program
+// add
+Please enter an item:
+// Bell peppers
+Enter add, delete, clear, print or '*' to end the program
+// add
+Please enter an item:
+// Flour
+Enter add, delete, clear, print or '*' to end the program
+// add 
+Please enter an item:
+// Chicken
+Enter add, delete, clear, print or '*' to end the program
+// print
+Groceries
+---------------
+Pineapples
+Bell peppers
+Flour
+Chicken
+---------------
+Enter add, delete, clear, print or '*' to end the program
+// delete             
+Please enter an item:
+// Bell peppers
+Enter add, delete, clear, print or '*' to end the program
+// print
+Groceries
+---------------
+Pineapples
+Flour
+Chicken
+---------------
+Enter add, delete, clear, print or '*' to end the program
+// delete   
+Please enter an item:
+// Lettuce
+Item wasn't in the list
+Enter add, delete, clear, print or '*' to end the program
+// clear
+Enter add, delete, clear, print or '*' to end the program
+// print
+Groceries
+---------------
+---------------
+Enter add, delete, clear, print or '*' to end the program
+// *
 ```
