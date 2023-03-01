@@ -115,4 +115,10 @@ bright
 ```
 
 ### Exercises
-__1.__ 
+__1.__ What values are in this vector and how many elements does it have? ```vector<int> nums(8,5);```
+
+__2.__ Using this vector: ```vector<char> chars = {'a', 'e', 'i', 'o', 'u'}```, what value is at ```chars[2]```? 
+
+__3.__ Write a program to initalize a vector with these values: ```{4,4,4,4,4,4,4}``` 
+
+__4.__ Write a program to initalize a vector with these values: ```{"I", "got", "this"}``` 
