@@ -16,6 +16,7 @@ void add_to_list(vector<string>& groceryList, string item)
   cout << "Please enter an item:" << endl;
   cin.ignore();
   getline(cin, item);
+  
   // Add item
 }
 
