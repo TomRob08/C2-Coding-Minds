@@ -9,7 +9,7 @@ Using the code below, complete each grocery list task (add, delete, clear, and p
 #include <vector>
 using namespace std;
 
-void add_to_list(vector<string>& groceryList, string item)
+void add_to_list(vector<string>& groceryList)
 {
   string item = "";
   
@@ -20,7 +20,7 @@ void add_to_list(vector<string>& groceryList, string item)
   // Add item
 }
 
-void del_from_list(vector<string>& groceryList, string item)
+void del_from_list(vector<string>& groceryList)
 {
   string item = "";
   
@@ -29,6 +29,11 @@ void del_from_list(vector<string>& groceryList, string item)
   getline(cin, item);
   
   // Delete item
+}
+
+void clear_list(vector<string>& groceryList)
+{
+  // Clear list
 }
 
 void printList(vector<string> groceryList)
