@@ -1,6 +1,6 @@
 # Vectors Intro
 
-Vectors are similar to arrays because they both can store a sequence of data but vectors have the advantage due to using dynamically allocated memory for it's elements. What is dynamic memory? Dynamic memory in terms of vectors means it doesn't need a declared size and the size can change by either increasing or decreasing. Although, vectors are not magical and perfect because they also have disadvantages which are increased memory usage and reletivily less efficient in terms of performace compared to arrays.
+Vectors are similar to arrays because they both can store a sequence of data but vectors have the advantage due to using dynamically allocated memory for it's elements. What is dynamic memory? Dynamic memory in terms of vectors means it doesn't need a declared size and the size can change by either increasing or decreasing. Although, vectors are not magical and perfect because they also have disadvantages which are increased memory usage and relatively less efficient in terms of performace compared to arrays.
 
 ## Declare an empty vector
 ```
