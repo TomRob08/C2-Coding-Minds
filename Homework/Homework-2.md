@@ -18,4 +18,4 @@ Your program should create a BankAccount object with an initial balance of $1000
 - Withdraw: Prompts the user to enter an amount to withdraw and subtracts it from the balance.
 - Quit: Exits the program.
 
-The user should be able to perform multiple operations until they choose to quit the program. Make sure any number entered by a user isn't negative.
+The user should be able to perform multiple operations until they choose to quit the program. Make sure negative numbers aren't accepted when depositing/withdrawing funds.
