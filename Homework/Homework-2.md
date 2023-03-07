@@ -3,11 +3,9 @@
 Create a program that simulates a bank account using C++ classes. 
 
 **Your program should have a BankAccount class with the following private member variables:**
-- account_number (integer)
 - balance (double)
 
 **Your BankAccount class should have the following public member functions:**
-- get_account_number(): returns the account number
 - get_balance(): returns the balance
 - set_balance(double new_balance): sets the balance to a new value
 - deposit(double amount): adds the specified amount to the balance
