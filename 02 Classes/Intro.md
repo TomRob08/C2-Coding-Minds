@@ -17,4 +17,11 @@ Let's continue with looking at the dog class.
 
 **What are some activites dogs do?**
 
-For this example we will use the dog's characteristics for it's member variables and the activites for it's member functions
+For this example we will use the dog's characteristics for it's member variables and the activites for it's member functions.
+
+## Objects
+In OOP, you can have many objects of the same class, but with different qualities. Your pet dog (if you have one) is an instance of a Dog class. And your teacher's pet dog (if they have one) is also an instance of the Dog class. Of course, those two dogs are not the exact same. They might differ in breed, age, and more, but no matter what they are still of the class Dog. In OOP, objects are allowed to be different from each other - the only thing they share is that they are of the same type.
+
+Using the dog class we can define different breeds as objects because they are all under the same classification and share similarities with one another.
+
+Let's use the information gained in this lesson and create a dog class with objects associated with it in a C++ program.
