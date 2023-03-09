@@ -1,7 +1,7 @@
 # Introduction to classes
 
 ## Object-Oriented Programming (OOP)
-In C++, Object-Oriented Programming is implemented using classes, which are user-defined types that encapsulate data and functions that operate on that data. Classes provide a blueprint or template for creating objects. An object is an instance of a class, created by calling the class constructor. The object has its own set of member variables (also called data members) and member functions (also called methods) that operate on those variables.
+In C++, Object-Oriented Programming is implemented using classes, which are user-defined types that encapsulate data and functions that operate on data. Classes provide a blueprint or template for creating objects. An object is an instance of a class, created by calling the class constructor. The object has its own set of member variables and member functions that operate on those variables.
 
 ## Classes
 A class in OOP is the name of a type of thing. Think of the word classification. We classify everything around us. Imagine a world where we only referred to anything as "a thing." Cars are now "things," and so are dogs, and so is everything else. It'd be pretty confusing, wouldn't it? How would conversations go? We would constantly be asking each other to be more descriptive all the time.
