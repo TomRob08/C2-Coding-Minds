@@ -29,7 +29,6 @@ Here's an example of what a class header file might look like:
 
 class MyClass {
 public:
-    MyClass(); // default constructor
     MyClass(int a); // constructor with one argument
     int getValue(); // public member function
     void setValue(int a); // public member function
@@ -41,3 +40,30 @@ private:
 ```
 
 The first two lines of the header file prevent multiple includes of the same file. After the class declaration, the header file ends with an ```#endif``` directive, which closes the header file.
+
+## Class Definition file
+
+In C++, a class definition file contains the implementation of the class member functions. The definition file typically has a ".cpp" extension.
+
+The purpose of a class definition file is to separate the implementation of the class from its declaration which continues to help with the readability of code.
+
+Here's an example of what a class definition file might look like:
+
+**File name:**  myClass.cpp
+
+```
+#include "MyClass.h"
+
+MyClass::MyClass(int value) 
+ : value(value)
+{
+}
+
+int MyClass::getValue() {
+    return value;
+}
+
+void MyClass::setValue(int value) {
+    this->value = value;
+}
+```
