@@ -20,6 +20,7 @@ In C++, a class header file is a file that declares the class, its member functi
 The purpose of a class header file is to separate the declaration of the class from its implementation. By separating these two aspects of the class, it makes it easier to read and maintain the code.
 
 Here's an example of what a class header file might look like:
+**File name:** myClass.h
 ```
 #ifndef MYCLASS_H
 #define MYCLASS_H
