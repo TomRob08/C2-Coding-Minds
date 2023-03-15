@@ -139,3 +139,48 @@ int main() {
 }
 ```
 
+**5.** Using the code below, create declaration and definition files for the class. Make sure to have ```#include <string>``` and ```using namespace std``` in your declaration file and ```#include <iostream>``` and ```using namespace std``` in your definition file.
+
+```
+#include <iostream>
+using namespace std;
+
+class Student {
+  public:
+    // Constructor
+    Student(std::string name, int age, std::string major, double gpa) 
+    : name(name), age(age), major(major), gpa(gpa) {}
+
+    void printInfo() const {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Major: " << major << endl;
+        cout << "GPA: " << gpa << endl;
+    }
+
+    bool isHonorsStudent() const {
+        return gpa >= 3.5;
+    }
+    
+  private:
+    string name;
+    int age;
+    string major;
+    double gpa;
+};
+
+int main()
+{
+  Student s1("Todd", 19, "Computer Science", 3.4);
+  Student s2("Christine", 20, "Math", 3.9);
+
+  s1.printInfo();
+  if(s1.isHonorsStudent()) cout << "Dean's List" << endl;
+
+  cout << endl;
+  
+  s2.printInfo();
+  if(s2.isHonorsStudent()) cout << "Dean's List" << endl;
+  return 0;
+}
+```
