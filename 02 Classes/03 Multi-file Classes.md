@@ -13,7 +13,7 @@ C++ classes can become quite large and complex, especially in larger programs. S
 
 - Readability: Splitting a class up into different files can make it easier to read and understand the code. It can also make it easier to find specific pieces of code if you need to make changes or add new features.
 
-## Header files
+## Class Declaration File
 
 In C++, a class header file is a file that declares the class, its member functions, and member variables. The header file typically has a ".h" extension and is included in other C++ files that use the class.
 
@@ -67,3 +67,9 @@ void MyClass::setValue(int value) {
     this->value = value;
 }
 ```
+
+In this example, we are implementing the member functions of the ```MyClass``` class that was declared in the header file ```MyClass.h```.
+
+The first line of the definition file includes the header file that declares the class. The rest of the file defines the member functions of the class.
+
+The member function definitions must specify the scope of the function using the class name followed by the scope resolution operator ```::```. This indicates that the function belongs to the class ```MyClass```. The definitions of the member functions follow the same names as the declarations in the header file.
