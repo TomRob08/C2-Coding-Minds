@@ -73,3 +73,69 @@ In this example, we are implementing the member functions of the ```MyClass``` c
 The first line of the definition file includes the header file that declares the class. The rest of the file defines the member functions of the class.
 
 The member function definitions must specify the scope of the function using the class name followed by the scope resolution operator ```::```. This indicates that the function belongs to the class ```MyClass```. The definitions of the member functions follow the same names as the declarations in the header file.
+
+## Using the class in main
+
+```
+#include <iostream>
+using namespace std;
+#include "MyClass.h"
+
+int main() {
+    MyClass obj2(20); // initialize an object of MyClass using constructor with one argument
+    cout << "obj2 value: " << obj2.getValue() << endl;
+
+    return 0;
+}
+
+```
+
+In this example, we first include the header file for the MyClass class. Then ```obj2```, is initialized using the constructor that takes one integer as the argument. We then use the ```getValue()``` function to retrieve the value of ```obj2``` and print it.
+
+## Rules
+1. Never, ever ```#include``` a source (.cpp) file
+2. Each class declaration is put into its own header (.h) file
+3. Each class definition is put into its own source (.cpp) file
+4. Other functions, including the ```main``` function are put into their own source (.cpp) file
+
+## Exercises
+**1.** What are some reasons for splitting a class into different files?
+
+**2.** What is the class declaration file?
+
+**3.** What is the class definition file?
+
+**4.** Using the code below, create declaration and definition files for the class. Make sure to have ```#include <string>``` and ```using namespace std``` in your declaration file and ```#include <iostream>``` and ```using namespace std``` in your definition file.
+```
+#include <iostream>
+using namespace std;
+
+class Car {
+  public:
+    // Constructor
+    Car(string make, string model, int year, double price) 
+    : make(make), model(model), year(year), price(price) {}
+
+    void printDetails() {
+        cout << "Make: " << make << endl;
+        cout << "Model: " << model << endl;
+        cout << "Year: " << year << endl;
+        cout << "Price: $" << price << endl;
+      }
+
+  private:
+    string make;
+    string model;
+    int year;
+    double price;
+};
+
+
+int main() {
+  Car sedan("Honda", "Accord", 2010, 10000);
+  sedan.printDetails();
+
+  return 0;
+}
+```
+
