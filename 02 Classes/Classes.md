@@ -119,6 +119,7 @@ Constuctors also enable programmers to reduce the amount of setter functions in 
 ```
 class Dog {
   public:
+    // Constructor
     Dog(string name, string color, int age) {
       this->name = name;
       this->color = color;
@@ -165,6 +166,17 @@ Chocolate
 11
 Woof
 ```
+
+**Constructors also can be created without using ```this``` by having the code below:**
+```
+// Constructor
+Dog(string name, string color, int age) 
+: name(name), color(color), age(age)
+{
+} 
+```
+
+By using ```:``` we can assign the function parameters to the member variables. The constructor function parameters go inside the parentheses for the member variable names. Make sure to include the curly backets. I personally recommend doing it this way beacuse it saves space but both ways of creating a constructor work.
 
 ### Exercises
 **1.** Create a class called ```Book``` that has three private member variables ```title```, ```author```, and ```pages```. Define public member functions ```get_title()```, ```get_author()```, ```get_pages()```, and ```print_info()``` to access and print the values of title, author, and pages. Also, define a public constructor that takes three parameters for title, author, and pages and initializes the corresponding member variables. Finally, write a program that creates a Book object using the constructor, and prints its information using the ```print_info()``` member function. The book will be Diary of a Wimpy Kid by Jeff Kinney which has 221 pages.
