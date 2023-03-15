@@ -22,6 +22,7 @@ The purpose of a class header file is to separate the declaration of the class f
 Here's an example of what a class header file might look like:
 
 **File name:** myClass.h
+
 ```
 #ifndef MYCLASS_H
 #define MYCLASS_H
