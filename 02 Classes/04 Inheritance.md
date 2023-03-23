@@ -127,3 +127,17 @@ In the example, the class shape has two protected member variables; ```width``` 
        3. Private
        
 **2.** Create a ```Vehicle``` class that has a constructor, a ```start()``` and a ```stop()``` method with ```num_Wheels``` as a member variable. Create a ```Car``` class that inherits from the ```Vehicle``` class and has a ```drive()``` method. Create a ```Bicycle``` class that also inherits from the ```Vehicle class``` and has a ```pedal()``` method. The ```start()``` method will print "Stating to roll", ```stop()``` method will print "Stopping", ```drive()``` method will print "This car is using <num_Wheels> to drive", ```pedal()``` method will print "This bike uses <num_Wheels> and a person pedaling to move". Create an object of each class and call their methods. 
+
+**3.** 
+Create a base class called ```FantasyCharacter``` with the following private member variables:
+
+- ```string name```: the name of the fantasy character
+- ```int healthPoints```: the health points of the fantasy character
+- ```int manaPoints```: the mana points of the fantasy character
+The ```FantasyCharacter``` class should also have a constructor that takes three parameters to initialize the member variables, as well as public getter methods for each of the member variables.
+
+Create a derived class called ```Knight``` that inherits from FantasyCharacter. The Knight class should have an additional private member variable called ```armorPoints```, which represents the armor points of the knight. The Knight class should also have a constructor that takes four parameters to initialize the member variables, as well as a public getter method for armorPoints. The Knight class should also have a method called ```Attack``` which prints, "Knight takes out their sword".
+
+Create a second derived class called ```Wizard``` that also inherits from FantasyCharacter. The Wizard class should have an additional private member variable called ```spellPower```, which represents the spell power of the wizard. The Wizard class should also have a constructor that takes four parameters to initialize the member variables, as well as a public getter method for spellPower. The Wizard class should also have a method called ```cast_Spell``` that prints "Wizard activates their spell".
+
+Finally, create a ```main()``` function that creates an object of each class and prints out the values of all the member variables using the public getter methods. You can also add some additional functionality, such as a method to cast a spell for the Wizard class or a method to attack for the Knight class.
