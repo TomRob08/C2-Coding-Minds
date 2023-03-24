@@ -1,4 +1,4 @@
-# Spliting a class into multiple files
+# Calculator
 
 Using the code below, split this class into multiple files. 
 
