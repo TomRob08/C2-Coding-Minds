@@ -60,7 +60,7 @@ In this example, ```Animal``` is the base class with a constructor that initiali
 
 **3.** When a derived class object is created, what does it inherit?
 
-**4.** Create a ```Country``` class that has ```name```, ```population```, and ```capital``` attributes and a ```describe()``` method that prints out the name, population, and capital of the country. Create a State class that inherits from the Country class and has a ```governor``` member and a ```describe()``` method that prints out the name, population, and capital of the state and the name of the governor. Create constructors for the base class and subclass. For now just have all code in public for both classes. Finally, create a country and state object relating to where you're from with relevant information and use the describe function for both objects.
+**4.** Create a ```Country``` class that has ```name```, ```population```, and ```capital``` attributes and a ```describe()``` method that prints out the name, population, and capital of the country. Create a ```State``` class that inherits from the Country class and has a ```governor``` member and a ```describe()``` method that prints out the name, population, and capital of the state and the name of the governor. Create constructors for the base class and subclass. For now just have all code in public for both classes. Finally, create a country and state object relating to where you're from with relevant information and use the describe function for both objects.
 
 ## Access Specifiers
 Access specifiers in C++ class inheritance are used to control the accessibility of base class members in the derived class. The three access specifiers in C++ are public, protected, and private.
@@ -141,3 +141,78 @@ Create a derived class called ```Knight``` that inherits from FantasyCharacter. 
 Create a second derived class called ```Wizard``` that also inherits from FantasyCharacter. The Wizard class should have an additional private member variable called ```spellPower```, which represents the spell power of the wizard. The Wizard class should also have a constructor that takes four parameters to initialize the member variables, as well as a public getter method for spellPower. The Wizard class should also have a method called ```cast_Spell``` that prints "Wizard activates their spell".
 
 Finally, create a ```main()``` function that creates an object of each class and prints out the values of all the member variables using the public getter methods. You can also add some additional functionality, such as a method to cast a spell for the Wizard class or a method to attack for the Knight class.
+
+
+## Multi-level Class Inheritance
+
+Multi-level inheritance is a type of inheritance in C++ where a derived class is derived from another derived class, which in turn is derived from a base class. This creates a hierarchical structure of classes, with each derived class inheriting the properties and behaviors of its parent classes.
+
+Think of it as a type of family structure. A family has a grandparent, a parent, and a child and each generation inherits commonalities from the previous generations so this can be related to classes by comparing the base class to the grandparent, the derived class to the parent, and the second generation derived class to the child.
+
+### Example
+```
+// Base Class
+class Grandparent {
+  public:
+    Grandparent(string name, int age) : 
+      name(name), age(age) {}
+
+    void sleep() {
+        cout << name << " is sleeping" << endl;
+    }
+
+    void print_age() {
+      cout << name << " is " << age << " years old" << endl;
+    }
+  protected:
+    string name;
+    int age;
+};
+
+// Derived class of Grandparent
+class Parent : public Grandparent {
+  public:
+    Parent(string name, int age, string city) :
+       Grandparent(name, age), city(city) {}
+
+    void residence() {
+        cout << name << " lives in " << city << endl;
+    }
+  protected:
+    string city;
+};
+
+// Derived class of Parent
+class Child : public Parent {
+  public:
+    Child(string name, int age, string city ,string favoriteToy) : Parent(name, age, city), favoriteToy(favoriteToy) {}
+    void play() {
+        cout << name << " is playing with " << favoriteToy << endl;
+    }
+  private:
+    string favoriteToy;
+};
+
+int main()
+{
+  Child person("Ben", 12, "Los Angeles", "Legos"); // Creates a Child object
+  person.sleep();
+  person.print_age();
+  person.residence();
+  person.play();
+}
+```
+
+### Exercises
+**1.** Using the table below that has a family structure and access specifiers, list the variables the child has access to.
+|             | Public | Protected | Private |
+|:-----------:|:------:|:---------:|:-------:|
+| Grandparent | int a; |   int b;  |  int c; |
+|    Parent   | int d; |   int e;  |  int f; |
+|    Child    | int g; |   int h;  |  int i; |
+
+**2.** Extend the ```Country``` class from the 4th exercise at the top of the page and add a derived class of the ```State``` class called ```City```
+
+## Polymorphism
+
+Inheritance is also a way to achieve polymorphism in C++. By inheriting from a base class, a derived class can have access to the base class's methods and attributes, and can override or extend them. This means that objects of the derived class can be used in the same way as objects of the base class.
