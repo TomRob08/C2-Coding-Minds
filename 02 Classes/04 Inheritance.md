@@ -60,7 +60,7 @@ In this example, ```Animal``` is the base class with a constructor that initiali
 
 **3.** When a derived class object is created, what does it inherit?
 
-**4.** Create a ```Country``` class that has ```name```, ```population```, and ```capital``` attributes and a ```describe()``` method that prints out the name, population, and capital of the country. Create a ```State``` class that inherits from the Country class and has a ```governor``` member and a ```describe()``` method that prints out the name, population, and capital of the state and the name of the governor. Create constructors for the base class and subclass. For now just have all code in public for both classes. Finally, create a country and state object relating to where you're from with relevant information and use the describe function for both objects.
+**4.** Create a ```Country``` class that has ```name```, ```population```, and ```capital``` attributes and a ```describeCountry()``` method that prints out the name, population, and capital of the country. Create a ```State``` class that inherits from the Country class and has a ```governor``` member and a ```describeState()``` method that prints out the name, population, and capital of the state and the name of the governor. Create constructors for the base class and subclass. For now just have all code in public for both classes. Finally, create a country and state object relating to where you're from with relevant information and use the describe function for both objects.
 
 ## Access Specifiers
 Access specifiers in C++ class inheritance are used to control the accessibility of base class members in the derived class. The three access specifiers in C++ are public, protected, and private.
@@ -129,18 +129,19 @@ In the example, the class shape has two protected member variables; ```width``` 
 **2.** Create a ```Vehicle``` class that has a constructor, a ```start()``` and a ```stop()``` method with ```num_Wheels``` as a member variable. Create a ```Car``` class that inherits from the ```Vehicle``` class and has a ```drive()``` method. Create a ```Bicycle``` class that also inherits from the ```Vehicle class``` and has a ```pedal()``` method. The ```start()``` method will print "Stating to roll", ```stop()``` method will print "Stopping", ```drive()``` method will print "This car is using <num_Wheels> to drive", ```pedal()``` method will print "This bike uses <num_Wheels> and a person pedaling to move". Create an object of each class and call their methods. 
 
 **3.** 
-Create a base class called ```FantasyCharacter``` with the following private member variables:
+Create a base class called ```FantasyCharacter``` with the following protected member variables:
 
 - ```string name```: the name of the fantasy character
 - ```int healthPoints```: the health points of the fantasy character
 - ```int manaPoints```: the mana points of the fantasy character
+
 The ```FantasyCharacter``` class should also have a constructor that takes three parameters to initialize the member variables, as well as public getter methods for each of the member variables.
 
 Create a derived class called ```Knight``` that inherits from FantasyCharacter. The Knight class should have an additional private member variable called ```armorPoints```, which represents the armor points of the knight. The Knight class should also have a constructor that takes four parameters to initialize the member variables, as well as a public getter method for armorPoints. The Knight class should also have a method called ```Attack``` which prints, "Knight takes out their sword".
 
 Create a second derived class called ```Wizard``` that also inherits from FantasyCharacter. The Wizard class should have an additional private member variable called ```spellPower```, which represents the spell power of the wizard. The Wizard class should also have a constructor that takes four parameters to initialize the member variables, as well as a public getter method for spellPower. The Wizard class should also have a method called ```cast_Spell``` that prints "Wizard activates their spell".
 
-Finally, create a ```main()``` function that creates an object of each class and prints out the values of all the member variables using the public getter methods. You can also add some additional functionality, such as a method to cast a spell for the Wizard class or a method to attack for the Knight class.
+Finally, create a ```main()``` function that creates an object of each class and prints out the values of all the member variables using the public getter methods. You should also use the methods to cast a spell for the Wizard class and the method to attack for the Knight class.
 
 
 ## Multi-level Class Inheritance
@@ -211,8 +212,50 @@ int main()
 |    Parent   | int d; |   int e;  |  int f; |
 |    Child    | int g; |   int h;  |  int i; |
 
-**2.** Extend the ```Country``` class from the 4th exercise at the top of the page and add a derived class of the ```State``` class called ```City```
+**2.** Extend the ```Country``` class from the 4th exercise at the top of the page and add a derived class of the ```State``` class called ```City```. The ```City``` class should have a member variable called ```Mayor```, a constructor, and a ```describeCity``` function. Also update variables to be contained within the preferred access specifier and split up the class into different files.
 
 ## Polymorphism
 
 Inheritance is also a way to achieve polymorphism in C++. By inheriting from a base class, a derived class can have access to the base class's methods and attributes, and can override or extend them. This means that objects of the derived class can be used in the same way as objects of the base class.
+
+### Example
+```
+#include <iostream>
+using namespace std;
+
+// Base class
+class Animal {
+public:
+    virtual void speak() {
+        cout << "Animal speaks!" << endl;
+    }
+};
+
+// Derrived Class
+class Dog : public Animal {
+public:
+    void speak() override {
+        cout << "Bark!" << endl;
+    }
+};
+
+// Derrived class
+class Cat : public Animal {
+public:
+    void speak() override {
+        cout << "Meow!" << endl;
+    }
+};
+
+int main() {
+    Animal animal;
+    Dog dog;
+    Cat cat;
+
+    animal.speak();
+    dog.speak();
+    cat.speak();
+}
+```
+
+The use of virtual functions is important in this example to achieve dynamic polymorphism. By declaring the ```speak()``` method as virtual in the base class, we allow derived classes to override it with their own implementation. When we call the method on a derived class object, the appropriate implementation is called based on the actual type of the object. This allows us to write code that works with objects of different classes without knowing their exact type at compile-time.
