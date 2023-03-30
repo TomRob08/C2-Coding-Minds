@@ -24,7 +24,7 @@ The objective of this assignment is to reinforce the concepts of class inheritan
 - Member Variables:
   - ```animal_name```, ```age```, ```weight``` 
 
-### Dirvived Classes
+### Derived Classes
 **Mammal:**
 - Member function:
   - ```describe()```: Prints a sentance containing all of the variables relating to the specific class
