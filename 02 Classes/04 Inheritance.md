@@ -89,8 +89,7 @@ class Shape {
     float height;
 };
 
-class Rectangle : 
-  public Shape {
+class Rectangle : public Shape {
   public:
     Rectangle(float rectWidth, float rectHeight) : 
       Shape(rectWidth, rectHeight) {}
@@ -126,7 +125,7 @@ In the example, the class shape has two protected member variables; ```width``` 
        2. Protected
        3. Private
        
-**2.** Create a ```Vehicle``` class that has a constructor, a ```start()``` and a ```stop()``` method with ```num_Wheels``` as a member variable. Create a ```Car``` class that inherits from the ```Vehicle``` class and has a ```drive()``` method. Create a ```Bicycle``` class that also inherits from the ```Vehicle class``` and has a ```pedal()``` method. The ```start()``` method will print "Stating to roll", ```stop()``` method will print "Stopping", ```drive()``` method will print "This car is using <num_Wheels> to drive", ```pedal()``` method will print "This bike uses <num_Wheels> and a person pedaling to move". Create an object of each class and call their methods. 
+**2.** Create a ```Vehicle``` class that has a constructor, a ```start()``` and a ```stop()``` method with ```num_Wheels``` as a member variable. Create a ```Car``` class that inherits from the ```Vehicle``` class and has a ```drive()``` method. Create a ```Bicycle``` class that also inherits from the ```Vehicle class``` and has a ```pedal()``` method. The ```start()``` method will print "Starting to roll", ```stop()``` method will print "Stopping", ```drive()``` method will print "This car is using <num_Wheels> to drive", ```pedal()``` method will print "This bike uses <num_Wheels> and a person pedaling to move". Create an object of each class and call their methods. 
 
 **3.** 
 Create a base class called ```FantasyCharacter``` with the following protected member variables:
