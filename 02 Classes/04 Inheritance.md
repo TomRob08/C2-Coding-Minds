@@ -214,6 +214,88 @@ int main()
 
 **2.** Extend the ```Country``` class from the 4th exercise at the top of the page and add a derived class of the ```State``` class called ```City```. The ```City``` class should have a member variable called ```Mayor```, a constructor, and a ```describeCity``` function. Also update variables to be contained within the preferred access specifier and split up the class into different files.
 
+## Multiple Classes inheritance
+C++ multi-class inheritance refers to a situation where a derived class is derived from two or more base classes. This means that the derived class inherits properties and functionalities from all of the base classes.
+
+### Example
+```
+// Define the first base class
+class BaseClass1 {
+public:
+    void method1() {
+        // Method implementation for BaseClass1
+    }
+};
+
+// Define the second base class
+class BaseClass2 {
+public:
+    void method2() {
+        // Method implementation for BaseClass2
+    }
+};
+
+// Define the derived class that inherits from both BaseClass1 and BaseClass2
+class DerivedClass : public BaseClass1, public BaseClass2 {
+public:
+    void method3() {
+        // Method implementation for DerivedClass
+    }
+};
+
+int main() {
+    DerivedClass obj;
+    obj.method1(); // Call method1 from BaseClass1
+    obj.method2(); // Call method2 from BaseClass2
+    obj.method3(); // Call method3 from DerivedClass
+    return 0;
+}
+
+```
+
+![image](https://user-images.githubusercontent.com/111817058/228981979-8137ceb8-d5d3-41fd-bd0f-117e94c8ba53.png)
+
+### Excersise
+**1.** 
+Create three classes: 
+- Student
+- Teacher
+- Course 
+
+The Student and Teacher classes are base classes.
+
+**Student:** 
+- Member functions:
+  - Constructor
+  - describeStudent()
+
+- Member Variables:
+  - studentName 
+  - studentAge
+  - major
+
+**Teacher:**
+- Member functions:
+  - Constructor
+  - describeTeacher()
+
+- Member Variables:
+  - teacherName 
+  - teacherAge
+  - department
+
+The Course class inherits from both the Student and Teacher classes using multiple class inheritance.
+
+**Course:**
+- Member functions:
+  - Constructor
+  - describeCourse()
+
+- Member Variables:
+  - courseName
+
+In the main function create a course object, pass the required data for the class, and call each describe function.
+
 ## Polymorphism
 
 Inheritance is also a way to achieve polymorphism in C++. By inheriting from a base class, a derived class can have access to the base class's methods and attributes, and can override or extend them. This means that objects of the derived class can be used in the same way as objects of the base class.
