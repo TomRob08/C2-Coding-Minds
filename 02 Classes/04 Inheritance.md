@@ -340,3 +340,8 @@ int main() {
 ```
 
 The use of virtual functions is important in this example to achieve dynamic polymorphism. By declaring the ```speak()``` method as virtual in the base class, we allow derived classes to override it with their own implementation. When we call the method on a derived class object, the appropriate implementation is called based on the actual type of the object. This allows us to write code that works with objects of different classes without knowing their exact type at compile-time.
+
+### Exercises
+**1.** Create a ```Superhero``` class with a ```useSuperpower()``` method. Then create two derived classes: ```Flash``` and ```Superman```. Each derived class should implement its own version of the ```useSuperpower()``` method by printing out a statement about their super powers. Finally, create a program that creates objects of each class and calls the ```useSuperpower()``` method for each object, demonstrating the polymorphic behavior of the virtual method.
+
+**2.** Create a ```VideoGameCharacter``` class with a ```jump()``` method. Then create two derived classes: ```Mario``` and ```Sonic```. Each derived class should implement its own version of the ```jump()``` method, but the implementation should involve different mechanics (e.g., Mario jumps higher but slower, Sonic jumps lower but faster). Finally, create a program that creates objects of each class and calls the ```jump()``` method for each object.
