@@ -17,4 +17,4 @@ Define three classes that inherit from a show: The Office, Avatar The Last Airbe
 
 In the main() function, create an object of each Show subclass and use them to output a quote from the show to the console.
 
-**You can either use the shows and qutoes above or you can use some of your favorite shows**
+**You can either use the shows and quotes above or you can use some of your favorite shows**
