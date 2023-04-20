@@ -1,7 +1,7 @@
 # Animal Kingdom
 
 ## Objective:
-The objective of this assignment is to reinforce the concepts of class inheritance and polymorphism in C++ programming. Students will be required to create a program that models an animal kingdom using class inheritance to create a hierarchy of classes representing different types of animals.
+The objective of this assignment is to reinforce the concepts of class inheritance in C++ programming. Students will be required to create a program that models an animal kingdom using class inheritance to create a hierarchy of classes representing different types of animals.
 
 ## Requirements:
 
