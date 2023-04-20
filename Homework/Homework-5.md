@@ -9,7 +9,7 @@ Define a Show class with the following member variables and methods:
 - Methods:
   - quote(): a virtual method that outputs a quote from the TV show to the console.
 
-Define three classes that inherit from a show: The Office, Friends, and Stranger Things. Each class should override the quote() method to output a different quote from the show:
+Define three classes that inherit from a show: The Office, Avatar The Last Airbender, and Stranger Things. Each class should override the quote() method to output a different quote from the show:
 
 - The Office: outputs "Identity theft is not a joke, Jim!"
 - Avatar The Last Airbender: outputs "Sometimes life is like this dark tunnel. You can't always see the light at the end of the tunnel, but if you just keep moving... you will come to a better place."
