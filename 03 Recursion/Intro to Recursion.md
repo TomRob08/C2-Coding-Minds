@@ -45,6 +45,6 @@ In C++ recursion, the base case is a condition that defines when the recursive f
 
 **2.** Write a recursive function that prints the even numbers from 1 to n. n is any number passed to the function.
 
-**3.** Write a C++ function that takes two integers base and exp as input and returns base raised to the power of exp using recursion. For example, if base is 2 and exp is 3, the function should return 2 * 2 * 2 = 8.
+**3.** Write a C++ function that takes two integers base and exponent as input and returns base raised to the power of exponent using recursion. For example, if base is 2 and exp is 3, the function should return 2 * 2 * 2 = 8.
 
 **4.** Write a recursive function that calculates the greatest common divisor (GCD) of two numbers a and b.
